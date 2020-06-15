@@ -15,14 +15,17 @@ import Foundation
 
 // Rules: Must use a class
 // 2: You need to subclass from NSObject
-// 3: 
-class Contact: NSObject {
+// 3: Use @objc to expose properties, classes, methods to Objective-C
+// 4: You must have Swift code building and added to target or you wont get file generated.
+
+//@objc(LSIContact) // May be some bugs associated with this
+@objc class Contact: NSObject {
     
-    var name: String
-    var relationship: String?
+    @objc var name: String
+    @objc var relationship: String?
     
     
-    init(name: String, relationship: String?) {
+    @objc init(name: String, relationship: String?) {
         self.name = name
         self.relationship = relationship
         

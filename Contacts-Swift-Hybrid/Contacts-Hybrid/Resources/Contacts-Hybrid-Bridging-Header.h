@@ -7,3 +7,7 @@
 
 // Info.plist -> will break the build (strange errors about 568pixel launch image)
 // Move briding header -> Failure to compile
+
+// Import any Objective-C file that you want to use in Swift
+
+#import "PDMContactController.h"
